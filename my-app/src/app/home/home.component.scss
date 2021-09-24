@@ -1,0 +1,31 @@
+.tile {
+  height: 80px;
+  background-color: #fff;
+  border-radius: 8%;
+  border: 1px solid white;
+  margin-right: 25px;
+  margin-bottom: 25px;
+}
+
+
+.clearfix::after {
+  content: "";
+  clear: both;
+}
+
+.searchForm {
+  margin-left: -14px;
+}
+
+a:hover {
+  color: grey;
+}
+
+.nav-link:active {
+  color: grey;
+}
+
+
+.input-group {
+  width: 85%;
+}

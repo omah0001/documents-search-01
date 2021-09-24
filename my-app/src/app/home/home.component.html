@@ -1,0 +1,27 @@
+<h2>Documents</h2>
+<h3>Search document or select category</h3>
+
+
+<div class="row">
+  <div class="col-md-4">
+    <ul class="nav flex-column">
+      <li class="nav-item" *ngFor="let category of categories">
+        <a class="nav-link" aria-current="page" href="#"
+          (click)="categorySelectedHandler($event, category)">{{category.label}}</a>
+      </li>
+    </ul>
+
+  </div>
+  <div class="col-md-8">
+    <div class="input-group mb-3 searchForm">
+      <input type="text" class="form-control" [(ngModel)]="documentQuery" placeholder="Start typing your document name" />
+    </div>
+    <div class="row">
+      <div class="col-md-3 tile" *ngFor="let document of filteredDocuments | documentsFilter : documentQuery">
+        <p class="badge bg-secondary float-end">{{document.categoryLabel}}</p>
+        <div class="clearfix"></div>
+        <p>{{document.label}}</p>
+      </div>
+    </div>
+  </div>
+</div>
